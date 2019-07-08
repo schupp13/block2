@@ -49,6 +49,7 @@ button{
 
 .movie h1{
   font-size: 30px;
+  
 }
 .movie img{
   box-sizing: border-box;
@@ -72,6 +73,8 @@ width: 80%;
     font-family: 'Notable', sans-serif;
     font-size: 50px;
     color: black;
+    margin-left: 100px;
+
     
   }
 
