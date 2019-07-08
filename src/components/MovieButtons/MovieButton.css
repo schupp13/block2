@@ -10,4 +10,14 @@ ul{
 
 .allButtons{
   margin-top: 50px;
+  
+}
+
+.allButtons > div{
+  background-color:black;
+  border-radius: 15px;
+}
+
+.allButtons > button{
+  height: 30px;
 }
