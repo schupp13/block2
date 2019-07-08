@@ -1,0 +1,54 @@
+.movies90{
+
+  display:flex;
+  justify-content: space-around;
+ background-repeat: no-repeat;
+ background-size: contain;
+  color: #FFA903;
+  flex-wrap: wrap;
+
+}
+
+.movies90 > * {
+  width: 100%;
+}
+
+.movies{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.movies > div{
+  width: 400px;
+}
+
+input{
+  height: 40px;
+  font-size: 25px;
+}
+
+button{
+  height: 50px;
+  font-size: 25px;
+}
+
+.movie{
+  width: 20%;
+}
+.movie img{
+  box-sizing: border-box;
+box-shadow: 10px 10px grey;
+width: 80%;
+}
+
+.movie p{
+ margin: 0;
+  width: 80%;
+  align-self: center;
+  }
+
+  .topic{
+    font-size: 70px;
+  }
