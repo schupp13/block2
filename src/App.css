@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   background-color: #0E3FA9;
@@ -8,5 +14,20 @@
 }
 
 .Logo{
- width: 40%;
+ max-width: 200px;
+ 
+}
+
+.logoDiv{
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #FFA903;
+}
+
+.company{
+  font-size: 60px;
+  font-family: 'Notable', sans-serif;
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import data from "./movieData";
 import "./movie90s.css";
-
+import MovieButtons from "../MovieButtons/MovieButtons"
 class Movie90 extends Component {
   constructor() {
     super();
@@ -38,7 +38,10 @@ class Movie90 extends Component {
     Promise.all(urls).then(results => {
       const movies = results.map(result => result.data);
       this.setState({ movies });
-    });
+      
+    }).catch(error => {
+      console.log(error)
+  });
     
   };
 
@@ -53,21 +56,24 @@ class Movie90 extends Component {
   render() {
     const movies = this.state.movies;
     let movieBlock =  movies.map(e => {
-      return (<div className="movie"><h1>{e.Title}</h1> <img src={e.Poster} alt={e.Title}/> <p>{e.Plot}</p></div>)
+      return (<div key={e.imdbID}className="movie"><h1>{e.Title}</h1> <img src={e.Poster} alt={e.Title}/><div><MovieButtons key={e.imdbID} plot={e.Plot} actors={e.Actors} awards={e.Awards} runtime={e.Runtime} genre={e.Genre} ratings={e.Ratings} /></div></div>)
     });
 
     return (
       <div className="movies90">
         <div>
+          <div className="topicDiv">
           <h1 className="topic">Top 90s</h1>
+          </div>
           <div className="movies">
              {movieBlock}      
           </div>
-         <div>
+       
+        </div>
+        <div className="buttonDiv">
          <input placeholder="Enter Imdb number" onChange={this.addMovieInput}></input>
          <button onClick={this.addMovieButton}>Add a Movie</button>
          </div>
-        </div>
       </div>
     );
   }
